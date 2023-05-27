@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bemsproduction.torche.MainActivity">
+    <item
+        android:id="@+id/action_sound"
+        android:orderInCategory="100"
+        android:title="@string/action_sound_des"
+        app:showAsAction="never"
+        android:visible="false"/>
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:title="@string/action_share"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_a_propos"
+        android:orderInCategory="100"
+        android:title="@string/action_a_propos"
+        app:showAsAction="never" />
+
+</menu>

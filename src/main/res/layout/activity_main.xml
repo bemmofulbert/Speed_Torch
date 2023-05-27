@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:drawingCacheQuality="high"
+    tools:context=".MainActivity"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawingCacheQuality="high"
+        android:theme="@style/Theme.Torche.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawingCacheQuality="high"
+            android:gravity="center">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawingCacheQuality="high"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:drawingCacheQuality="high"
+                    app:srcCompat="@android:drawable/ic_lock_idle_charging" />
+
+                <TextView
+                    android:id="@+id/text_batLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:drawingCacheQuality="high"
+                    android:gravity="center"
+                    android:text="0%" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:drawingCacheQuality="high"
+                android:gravity="right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:menu="@menu/menu_main"
+                app:popupTheme="@style/Theme.Torche.PopupOverlay">
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:drawingCacheQuality="high"
+        app:layout_constraintBottom_toTopOf="@+id/appBarLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:srcCompat="@drawable/ic_flashlight_torch" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutEcran"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawingCacheQuality="high"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/appBarLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:layout_editor_absoluteX="0dp"
+        android:animateLayoutChanges="true">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_controlEcran"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:drawingCacheQuality="high"
+            android:rotation="-90"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:soundEffectsEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutLed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawingCacheQuality="high"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/appBarLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        tools:layout_editor_absoluteX="0dp"
+        android:animateLayoutChanges="true">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_controlLed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:drawingCacheQuality="high"
+            android:rotation="-90"
+            android:scaleX="2"
+            android:scaleY="2"
+            android:soundEffectsEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawingCacheQuality="high"
+        android:elevation="10dp"
+        android:outlineProvider="background"
+        android:theme="@style/Theme.Torche.PopupOverlay"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawingCacheQuality="high"
+            android:orientation="horizontal"
+            android:theme="@style/Theme.Torche.AppBarOverlay"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <ImageButton
+                android:id="@+id/but_led"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@color/purple_700"
+                android:drawingCacheQuality="high"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:theme="@style/Theme.Torche.AppBarOverlay"
+
+                app:srcCompat="@drawable/ic_flashlight_torch"
+                app:tint="@color/white" />
+
+            <ImageButton
+                android:id="@+id/but_ecran"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginLeft="1dp"
+                android:layout_weight="1"
+                android:background="@color/purple_700"
+                android:cropToPadding="false"
+                android:drawingCacheQuality="high"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:theme="@style/Theme.Torche.AppBarOverlay"
+                app:srcCompat="@drawable/ic_smartphone" />
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
